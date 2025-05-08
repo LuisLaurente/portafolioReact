@@ -1,0 +1,84 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo e info personal */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .navbar-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .navbar-title h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .navbar-title p {
+    font-size: 0.9rem;
+    color: #c9d1d9;
+  }
+  
+  /* Enlaces */
+  .navbar-links {
+    background-color: #293857;
+    width: 45rem;
+    font-size: 1.2rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    gap: 5rem;
+  }
+  
+  .navbar-links a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar-links a:hover {
+    color: #08101a;
+  }
+  
+  /* Responsive: menú en columna para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  
+    .navbar-links li {
+      padding: 0.5rem 0;
+    }
+  }
+  
