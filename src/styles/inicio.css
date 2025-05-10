@@ -1,46 +1,240 @@
-.disponible{
+.color-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: aquamarine;
+  margin: 0 5px;
+  animation: fadeBlink 0.7s infinite ease-in-out;
+  opacity: 1; 
+}
+
+@keyframes fadeBlink {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.hero {
+  padding: 0.7rem 1rem;
+}
+
+.disponible {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.disponible p {
+  border: 1px solid aquamarine;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  color: aquamarine;
+  font-size: 1rem;
+}
+
+.color-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: aquamarine;
+  animation: fadeBlink 2s infinite ease-in-out;
+}
+
+@keyframes fadeBlink {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: end;
+  height: 25rem;
+  width: 20%;
+}
+
+.hero-image img {
+  height: 100%;
+  width: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 1rem;
+  width: 40%;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: beige;
+  line-height: 1.1;
+}
+
+.hero-content h1 span {
+  color: aquamarine;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: aquamarine;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #c9d1d9;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-image {
+    height: 22rem;
     display: flex;
     justify-content: center;
+  }
 }
-.disponible p{
-    border: 1px solid aquamarine;
-    padding: 0.5rem 2rem;
-    border-radius: 1rem;
-    color: aquamarine;
-}
-.hero-container{
-    height: 70vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .hero-content,
+  .hero-image {
+    width: 80%;
+  }
+
+  .hero-image {
+    height: 20rem;
+  }
+
+  .hero-content {
     align-items: center;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .hero {
+    padding: 0 1rem;
+  }
 }
-.hero-image{
-    display: flex;
-    justify-content: center;
-    height: 25rem;
-    width: 20%;
+
+@media (max-width: 600px) {
+  .hero-content,
+  .hero-image {
+    width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .disponible p {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
-.hero-content{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding: 1rem;
-    width: 40%;
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-image {
+    height: 18rem;
+  }
+
+  .disponible {
+    margin-bottom: 1.5rem;
+  }
+
+  .color-dot {
+    width: 8px;
+    height: 8px;
+  }
 }
-.hero-content h1{
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
-    color: beige;
-}
-.hero-content h2{
+
+@media (max-width: 360px) {
+  .hero-content h1 {
     font-size: 2rem;
-    margin-bottom: 1rem;
-    color: aquamarine;
-}
-.hero-content p{
-    display: flex;
+  }
+
+  .hero-content h2 {
     font-size: 1.2rem;
-    color: #c9d1d9;
-    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-image {
+    height: 16rem;
+  }
+
+  .disponible p {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+  }
 }

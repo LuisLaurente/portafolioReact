@@ -1,7 +1,6 @@
 
 .skills-section {
   padding: 2rem 0;
-  background-color: #f3f4f6;
 }
 
 .skills-container {
@@ -73,7 +72,7 @@
 /* Modo oscuro */
 @media (prefers-color-scheme: dark) {
   .skills-section {
-    background-color: #1f2937;
+    background-color: var(--azul-oscuro);
   }
 
   .skills-title {

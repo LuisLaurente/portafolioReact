@@ -6,7 +6,7 @@ const Inicio = () => {
   return (
     <div className="hero">
         <div className="disponible">
-            <p>Disponible para trabajar</p>
+            <p><span className="color-dot"></span>Disponible para trabajar</p>
         </div>
       <div className="hero-container">
         <div className="hero-content">
