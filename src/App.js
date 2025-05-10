@@ -1,6 +1,10 @@
 
 import './App.css';
 import Navbar from './components/Navbar';
+import Inicio from './components/inicio';
+import Projects from './components/projects';
+import Contact from './components/contact';
+import Skills from './components/skills';
 
 function App() {
   return (
@@ -8,25 +12,18 @@ function App() {
       <Navbar />
       <main>
         <section id="home">
-          <h2>Inicio</h2>
-          <p>Contenido de la sección de inicio.</p>
+          <Inicio />
         </section>
         <section id="skills">
-          <h2>Skills</h2>
-          <p>Contenido de la sección de habilidades.</p>
+          <Skills />
         </section>
         <section id="projects">
-          <h2>Proyectos</h2>
-          <p>Contenido de la sección de proyectos.</p>
+          <Projects />
         </section>
         <section id="contact">
-          <h2>Contacto</h2>
-          <p>Contenido de la sección de contacto.</p>
+          <Contact />
         </section>
       </main>
-      <footer>
-        <p>&copy; 2023 Luis Laurente. Todos los derechos reservados.</p>
-      </footer>
     </div>
   );
 }

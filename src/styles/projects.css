@@ -1,0 +1,160 @@
+
+.containerMiniNavBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.miniNavBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    background-color: var(--azul-oscuro);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+}
+
+.miniNavBar li button{
+    background-color: var(--azul-claro);
+    border: none;
+    color: beige;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+}
+
+/* Contenedor principal de proyectos */
+.projects-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: var(--azul-claro);
+  border-radius: 1rem;
+}
+
+.projects-container h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: beige;
+}
+
+/* Grid de proyectos */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+/* Tarjeta de proyecto */
+.project-card {
+  background-color: var(--azul-oscuro);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.project-card .card-content {
+  padding: 1.5rem;
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.75rem 0;
+  color: beige;
+}
+
+.project-card p {
+  color: #c9cbce;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Tecnologías */
+.tech-stack {
+  margin-top: 1rem;
+}
+
+.tech-stack p {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: rgb(87, 87, 80);
+}
+
+.tech-stack .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-stack .tag {
+  background-color: #04548a;
+  color: #4a5568;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid #e2e8f0;
+}
+
+/* Mensaje cuando no hay proyectos */
+.no-projects {
+  text-align: center;
+  padding: 2rem;
+  color: #718096;
+  font-style: italic;
+}
+.tech-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.tech-tag{
+    background-color: var(--azul-claro);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: beige;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .project-navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container h1 {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

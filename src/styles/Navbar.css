@@ -54,14 +54,14 @@
   }
   
   .navbar-links a {
-    color: #c9d1d9;
+    color: aquamarine;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
   }
   
   .navbar-links a:hover {
-    color: #08101a;
+    color: beige;
   }
   
   /* Responsive: menú en columna para pantallas pequeñas */

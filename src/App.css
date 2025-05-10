@@ -1,6 +1,14 @@
+*:root{
+    --azul-oscuro: hsl(219, 25%, 14%); /* Color principal de la paleta */
+    --azul-claro: #293857; /* Color secundario de la paleta */
+    --agua-marina: aquamarine; /* Color de acento */
+    --text-color: #333; /* Color del texto */
+    --background-color: #fff; /* Color de fondo */
+    --border-radius: 8px; /* Radio de borde para los elementos */
+}
+
 .App {
-  text-align: center;
-  background-color: #1a202b;
+  background-color: var(--azul-oscuro);
 }
 
 .App-logo {

@@ -1,0 +1,156 @@
+/* contact.css */
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  height: 60vh;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.contact-container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: beige;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 40rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: var(--azul-claro);
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-label {
+  font-weight: bold;
+  min-width: 100px;
+  color: beige;
+  font-size: 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.contact-value {
+  color: beige;
+  font-size: 1.5rem;
+}
+
+.email-container {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center;
+  margin-left: 1.5rem;
+  gap: 1rem;
+}
+
+.copy-button {
+  background-color: var(--azul-oscuro);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: rgb(62, 81, 107);
+}
+
+.copy-button:active {
+  transform: scale(0.98);
+}
+
+a.contact-value {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+a.contact-value:hover {
+  text-decoration: underline;
+}
+.phone-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.msjWhatsapp{
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+.phone-container button{
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+}
+.msjWhatsapp img{
+  animation: heartbeat 1.5s infinite;
+  transition: transform 0.3s ease;
+}
+.msjWhatsapp img:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .email-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .contact-label {
+    margin-bottom: 0.25rem;
+  }
+}
